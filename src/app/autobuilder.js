@@ -8,17 +8,17 @@ export default {
 
     function buildUp(i = 0) {
       
-      if (i < levels.length) {
+      if (i < this.levels.length) {
         setTimeout(() => {
-          const res = window.state.resources[levels[i].resource];
+          const res = window.state.resources[this.levels[i].resource];
 
-          if (res.level < levels[i].level) {
+          if (res.level < this.levels[i].level) {
             if (res.button) {
-              console.log('Upgrading '+levels[i].resource+' to level: '+(parseInt(res.level)+1));
+              console.log('Upgrading '+this.levels[i].resource+' to level: '+(parseInt(res.level)+1));
               res.button.click();
               return;
             }
-            console.log('Trying to upgrade '+levels[i].resource+' to level: '+(parseInt(res.level)+1)+' not resources available');
+            console.log('Trying to upgrade '+this.levels[i].resource+' to level: '+(parseInt(res.level)+1)+' not resources available');
             return;
           }
 
@@ -26,7 +26,7 @@ export default {
           console.log({
             res,
           });
-          console.log('DONE => '+levels[i].resource+' level: '+levels[i].level);
+          console.log('DONE => '+this.levels[i].resource+' level: '+this.levels[i].level);
           console.log('=======================================');
           */
 
