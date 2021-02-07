@@ -12,7 +12,7 @@ function initOgameBot() {
   state.getState();
 
   setTimeout(function () {
-    console.log(state);
+    console.log(window.state);
 
     switch(component) {
       case 'supplies':

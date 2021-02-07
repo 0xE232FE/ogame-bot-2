@@ -24,18 +24,34 @@ export default {
       Metal: {
         button: document.querySelector('li.metalMine .upgrade'),
         level: parseInt(document.querySelector('li.metalMine .level').dataset.value),
+        upgrade_available: this.button !== null,
+        upgrade() {
+          this.button.click();
+        },
       },
       Crystal: {
         button: document.querySelector('li.crystalMine .upgrade'),
         level: parseInt(document.querySelector('li.crystalMine .level').dataset.value),
+        upgrade_available: this.button !== null,
+        upgrade() {
+          this.button.click();
+        },
       },
       Deuterium: {
         button: document.querySelector('li.deuteriumSynthesizer .upgrade'),
         level: parseInt(document.querySelector('li.deuteriumSynthesizer .level').dataset.value),
+        upgrade_available: this.button !== null,
+        upgrade() {
+          this.button.click();
+        },
       },
       Energy: {
         button: document.querySelector('li.solarPlant .upgrade'),
         level: parseInt(document.querySelector('li.solarPlant .level').dataset.value),
+        upgrade_available: this.button !== null,
+        upgrade() {
+          this.button.click();
+        },
       },
       Satellites: {
         button: document.querySelector('li.solarSatellite .upgrade'),
@@ -44,14 +60,26 @@ export default {
       metalStorage: {
         button: document.querySelector('li.metalStorage .upgrade'),
         level: parseInt(document.querySelector('li.metalStorage .level').dataset.value),
+        upgrade_available: this.button !== null,
+        upgrade() {
+          this.button.click();
+        },
       },
       crystalStorage: {
         button: document.querySelector('li.crystalStorage .upgrade'),
         level: parseInt(document.querySelector('li.crystalStorage .level').dataset.value),
+        upgrade_available: this.button !== null,
+        upgrade() {
+          this.button.click();
+        },
       },
       deuteriumStorage: {
         button: document.querySelector('li.deuteriumStorage .upgrade'),
         level: parseInt(document.querySelector('li.deuteriumStorage .level').dataset.value),
+        upgrade_available: this.button !== null,
+        upgrade() {
+          this.button.click();
+        },
       },
       last_update: Date.now()
     }

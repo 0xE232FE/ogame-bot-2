@@ -13,10 +13,12 @@ export default {
         setTimeout(() => {
           const res = window.state.resources[builder.levels[i].resource];
 
+          
           if (res.level < builder.levels[i].level) {
-            if (res.button) {
+            console.log(res);
+            if (res.upgrade_available) {
               console.log('Upgrading '+builder.levels[i].resource+' to level: '+(parseInt(res.level)+1));
-              res.button.click();
+              res.upgrade();
               return;
             }
             console.log('Trying to upgrade '+builder.levels[i].resource+' to level: '+(parseInt(res.level)+1)+' not resources available');
